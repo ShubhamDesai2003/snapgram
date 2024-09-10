@@ -55,6 +55,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             //     localStorage.clear();
             // }
             return false;
+            // return console.clear();
 
         } catch (error) {
             console.log(error)
@@ -82,7 +83,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
 
     useEffect(() => {
-        const handleBeforeUnload = (event) => {
+        const handleBeforeUnload = () => {
                 signOutAccount();
                 localStorage.clear();
                 localStorage.setItem('pageclosed', 'true');
